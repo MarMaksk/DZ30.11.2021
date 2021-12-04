@@ -1,6 +1,6 @@
-document.querySelectorAll("ul > li").onclick = (event) => {
-    console.log('event.target')
-    console.log(event.target)
-    let li = document.querySelector(event.target)
-    li.innerHTML = 'blue'
-}
+document.querySelectorAll("li").forEach(
+    el => el.onclick = (event) => {
+    let li = document.querySelector('.orange')
+        li.classList.remove('orange')
+    event.target.classList.add('orange')
+})
